@@ -6,11 +6,10 @@ export const MainpageStyle = styled.div`
     margin-bottom: 0em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 0px;
     padding: 1em;
     text-align: left;
     width: 600px;
-    margin-top: 50%;
+    margin-top: 25%;
 `
 
 export const FormStyle = styled.div`

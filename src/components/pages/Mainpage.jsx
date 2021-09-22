@@ -18,7 +18,7 @@ const Mainpage = () => {
     const onInputChange = e => {
         const { name, value } = e.target;
         setCredential({ ...credential, [name]: value });
-        validateEmail(e);
+        if (e.target.type === "email") validateEmail(e)
     };
 
     const onSubmit = event => {
@@ -26,7 +26,15 @@ const Mainpage = () => {
         const { fullname, email, comment } = credential;
 
         axios.post('http://localhost:8000/contact/', { fullname, email, comment })
-            // .then((result) => { console.log(result) })
+            .catch((err) => {
+                if (err.response) {
+                    console.log(err.response.data);
+                    console.log(err.response.status);
+                    console.log(err.response.headers);
+                } else if (err.request) {
+                    console.log(err.request);
+                } else console.log('Error', err.message);
+            })
     };
 
     const validateEmail = (e) => {
@@ -47,6 +55,7 @@ const Mainpage = () => {
                             name="comment"
                             placeholder="Hello! what will you like me to do for you? 😇"
                             onChange={onInputChange}
+                            style={{height: 300}}
                         />
                     </FormGroup>
 
@@ -78,8 +87,13 @@ const Mainpage = () => {
                     </Row>
                 </FormStyle>
 
-                <Button onClick={onSubmit}>
-                    Send
+                <Button
+                    block
+                    onClick={onSubmit}
+                    color="primary"
+                    size="md"
+                >
+                    Submit
                 </Button>
             </Form>
         </MainpageStyle>
