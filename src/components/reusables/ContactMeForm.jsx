@@ -54,9 +54,7 @@ const ContactMeForm = () => {
 
     return (
         <FormStyle>
-                <Form
-                    onSubmit={onSubmit}
-                >
+                <Form onSubmit={onSubmit}>
                     <InnerFormStyle>
                         <FormGroup>
                             <Input
@@ -64,7 +62,10 @@ const ContactMeForm = () => {
                                 name="comment"
                                 placeholder="Hello! what will you like me to do for you? 😇"
                                 onChange={onInputChange}
-                                style={{ height: 300, fontFamily: 'Noto Sans Mono, monospace' }}
+                            style={{
+                                height: 300,
+                                fontFamily: 'Noto Sans Mono, monospace'
+                            }}
                                 value={credential.comment}
                             />
                         </FormGroup>

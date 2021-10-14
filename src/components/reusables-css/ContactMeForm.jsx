@@ -4,17 +4,23 @@ export const FormStyle = styled.div`
     text-align: left;
     width: 750px;
     padding: 1em;
-    border: 2px solid #d3d3d3;
-    border-radius: .5em;
+    border: 1px solid #d3d3d3;
+    border-radius: .4em;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
-`
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    @media (max-width: 425px) {
+        width: auto;
+    }
+`;
 
 export const InnerFormStyle = styled.div`
-    padding: 1em;
-`
+    padding: 1em !important;
+`;
 
 export const ButtonStyle = styled.button`
     display: block;
@@ -35,4 +41,4 @@ export const ButtonStyle = styled.button`
         cursor: pointer;
         opacity: 70%;
         }
-`
+`;

@@ -20,7 +20,7 @@ const Navigationbar = () => {
             >
                 <NavbarBrand href="http://localhost:3000/main" className="mr-auto">
                     <TaglineStyle>
-                        0lanr3w4ju: Lag05 based Fullstack Developer<span>/Ethical Hacker</span>
+                        0lanr3w4ju: Lag05 based Fullstack Developer<span> / Ethical Hacker</span>
                     </TaglineStyle>
                 </NavbarBrand>
 
