@@ -9,6 +9,7 @@ import Mainpage from './components/pages/Mainpage';
 const App = () => {
   return (
     <Router>
+      {/* <Navigationbar /> */}
       <Switch>
         <Route path="/main">
           <Mainpage />

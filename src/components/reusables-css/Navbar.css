@@ -1,0 +1,19 @@
+body {
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+
+.navbarStyle {
+    background: transparent !important;
+    padding: 3px ​1rem !important;
+}
+
+.navbarTogglerStyle {
+    background-image: url("../../assets/icons/navBarIcn/icons8-menu-36.png");
+    background-repeat:no-repeat;
+    border: none !important;
+    transition: transform 1s;
+}
+
+.navbarTogglerStyle:active {
+    transform: rotate(360deg);
+}
