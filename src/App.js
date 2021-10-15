@@ -11,7 +11,7 @@ const App = () => {
     <Router>
       {/* <Navigationbar /> */}
       <Switch>
-        <Route path="/main">
+        <Route path="/">
           <Mainpage />
         </Route>
       </Switch>
