@@ -18,7 +18,7 @@ const Navigationbar = () => {
                 fixed="top"
                 className="navbarStyle"
             >
-                <NavbarBrand href="http://localhost:3000/main" className="mr-auto">
+                <NavbarBrand href="http://localhost:3000" className="mr-auto">
                     <TaglineStyle>
                         [0lanr3w4ju]: Lag05 based Fullstack Developer<span> = Ethical Hacker</span>
                     </TaglineStyle>
@@ -29,7 +29,7 @@ const Navigationbar = () => {
                 {/* <Collapse isOpen={!collapsed} navbar>
                     <Nav navbar>
                         <NavItem>
-                            <NavLink href="http://localhost:3000/main">
+                            <NavLink href="http://localhost:3000">
                                 <NavLinkStyle>
                                     Github
                                 </NavLinkStyle>
@@ -37,7 +37,7 @@ const Navigationbar = () => {
                         </NavItem>
 
                         <NavItem>
-                            <NavLink href="http://localhost:3000/main">
+                            <NavLink href="http://localhost:3000">
                                 <NavLinkStyle>
                                     Dribble
                                 </NavLinkStyle>
