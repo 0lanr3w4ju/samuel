@@ -1,5 +1,5 @@
 // core imports
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 
 // styling imports
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
@@ -8,9 +8,9 @@ import '../reusables-css/Navbar.css'
 
 const Navigationbar = () => {
 
-    const [collapsed, setCollapsed] = useState(true);
+    // const [collapsed, setCollapsed] = useState(true);
 
-    const toggleNavbar = () => setCollapsed(!collapsed);
+    // const toggleNavbar = () => setCollapsed(!collapsed);
 
     return (
         <div>
@@ -20,13 +20,13 @@ const Navigationbar = () => {
             >
                 <NavbarBrand href="http://localhost:3000/main" className="mr-auto">
                     <TaglineStyle>
-                        0lanr3w4ju: Lag05 based Fullstack Developer<span> / Ethical Hacker</span>
+                        [0lanr3w4ju]: Lag05 based Fullstack Developer<span> = Ethical Hacker</span>
                     </TaglineStyle>
                 </NavbarBrand>
 
-                <NavbarToggler onClick={toggleNavbar} className="mr-2 navbarTogglerStyle" />
+                {/* <NavbarToggler onClick={toggleNavbar} className="mr-2 navbarTogglerStyle" /> */}
 
-                <Collapse isOpen={!collapsed} navbar>
+                {/* <Collapse isOpen={!collapsed} navbar>
                     <Nav navbar>
                         <NavItem>
                             <NavLink href="http://localhost:3000/main">
@@ -44,7 +44,7 @@ const Navigationbar = () => {
                             </NavLink>
                         </NavItem>
                     </Nav>
-                </Collapse>
+                </Collapse> */}
             </Navbar>
         </div>
     )

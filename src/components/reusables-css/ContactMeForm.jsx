@@ -42,3 +42,7 @@ export const ButtonStyle = styled.button`
         opacity: 70%;
         }
 `;
+
+export const FormFeedbackStyle = styled.p`
+    color: white;
+`;

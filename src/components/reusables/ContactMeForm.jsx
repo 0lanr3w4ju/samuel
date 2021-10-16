@@ -2,13 +2,14 @@ import React, { useState } from "react";
 
 // styling imports
 import { Row, Col, Form, FormGroup, Input, FormFeedback } from 'reactstrap';
-import { FormStyle, InnerFormStyle, ButtonStyle } from '../reusables-css/ContactMeForm';
+import { FormStyle, InnerFormStyle, ButtonStyle, FormFeedbackStyle } from '../reusables-css/ContactMeForm';
 
 // http requests
 import axios from "axios";
 
 
 const ContactMeForm = () => {
+
     const clientCredential = {
         fullname: '',
         email: '',
@@ -21,9 +22,11 @@ const ContactMeForm = () => {
 
     const onInputChange = e => {
         const { name, value } = e.target;
+
         setCredential({ ...credential, [name]: value });
-        console.log(credential);
-        if (e.target.type === "email") validateEmail(e);
+        
+        if (e.target.type === "email")
+            validateEmail(e);
     };
 
     const validateEmail = (e) => {
@@ -36,6 +39,7 @@ const ContactMeForm = () => {
 
     const onSubmit = event => {
         event.preventDefault();
+
         const { fullname, email, comment } = credential;
         
         axios.post('http://localhost:8000/contact/', { fullname, email, comment })
@@ -48,6 +52,7 @@ const ContactMeForm = () => {
                     console.log(err.request);
                 } else console.log('Error', err.message);
             });
+        
         setEmailState("");
         setCredential(clientCredential);
     };
@@ -60,12 +65,12 @@ const ContactMeForm = () => {
                             <Input
                                 type="textarea"
                                 name="comment"
-                                placeholder="Hello! what will you like me to do for you? 😇"
+                                placeholder="Hi, what will you like me to do for you? 😇"
                                 onChange={onInputChange}
-                            style={{
-                                height: 300,
-                                fontFamily: 'Noto Sans Mono, monospace'
-                            }}
+                                style={{
+                                    height: 300,
+                                    fontFamily: 'Noto Sans Mono, monospace'
+                                }}
                                 value={credential.comment}
                             />
                         </FormGroup>
@@ -74,7 +79,9 @@ const ContactMeForm = () => {
                             <Col md={6}>
                                 <FormGroup>
                                     <Input
-                                        type="fullname" name="fullname" placeholder="please enter your fullname"
+                                        type="fullname"
+                                        name="fullname"
+                                        placeholder="please enter your fullname"
                                         onChange={onInputChange}
                                         value={credential.fullname}
                                         style={{ fontFamily: 'Noto Sans Mono, monospace' }}
@@ -86,15 +93,19 @@ const ContactMeForm = () => {
                                 <FormGroup>
                                     <Input
                                         type="email"
-                                        name="email" placeholder="please enter your email"
+                                        name="email"
+                                        placeholder="please enter your email"
                                         onChange={onInputChange}
                                         valid={emailState === 'has-success'}
                                         invalid={emailState === 'has-danger'}
                                         value={credential.email}
                                         style={{ fontFamily: 'Noto Sans Mono, monospace' }}
                                     />
-                                    <FormFeedback >
-                                        Looks like there is an issue with your email. Please input a correct email.
+                                
+                                    <FormFeedback>
+                                        <FormFeedbackStyle>
+                                            💀 seems like there is an issue with your email address, please address it.
+                                        </FormFeedbackStyle>
                                     </FormFeedback>
                                 </FormGroup>
                             </Col>
@@ -106,7 +117,7 @@ const ContactMeForm = () => {
                         >
                             Submit
                         </ButtonStyle>
-
+                    
                     </InnerFormStyle>
                 </Form>
             </FormStyle>

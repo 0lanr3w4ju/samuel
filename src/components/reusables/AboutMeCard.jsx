@@ -7,6 +7,8 @@ import {
     Text,
     SocialIcons
 } from '../reusables-css/AboutMeCard';
+
+// media import
 import olanrewaju from '../../assets/imgs/DSC09324.jpg';
 
 // icons imports
@@ -24,14 +26,12 @@ const AboutMeCard = () => {
                 </HeaderText>
 
                 <Text>
-                    I am an enthusiastic and a nonstop learner, that's what I consider life to be all about, I am also a lover of
-                    chess. I think fast and random when it is time to brainstorm or be creative, I love asking people
-                    questions, especially questions that leads to discussions about solution processes people would
-                    imagine was available to get a task done because their answers help give me a human-centered
-                    software design perspective, which aids into development. This attribute have made me a better and
-                    faster developer of quality and working codes. I currently know how to use Django, react, and spring boot
-                    web development frameworks comfortably and am conversant with various software testing techniques
-                    and tools.
+                    I am an enthusiastic, nonstop learner, that's what I consider life to be all about,
+                    I also love to play chess. I enjoy thinking fast and random when brainstorming or being creative,
+                    I love asking questions, especially those that leads to talks of solution processes people would wish was available to get tasks done,
+                    this kind of discussions gives me a human-centered software type of design perspective,
+                    which I use in my development phases. This and more attributes makes me a better and faster developer of
+                    quality and working software programmes.
                 </Text>
                 
                 <SocialIcons>
