@@ -18,7 +18,7 @@ const Navigationbar = () => {
                 fixed="top"
                 className="navbarStyle"
             >
-                <NavbarBrand href="http://localhost:3000" className="mr-auto">
+                <NavbarBrand href="https://0lanr3w4ju.github.io/samuel/" className="mr-auto">
                     <TaglineStyle>
                         [0lanr3w4ju]: Lag05 based Fullstack Developer<span> = Ethical Hacker</span>
                     </TaglineStyle>
