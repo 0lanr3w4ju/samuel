@@ -104,7 +104,7 @@ const ContactMeForm = () => {
                                 
                                     <FormFeedback>
                                         <FormFeedbackStyle>
-                                            💀 seems like there is an issue with your email address, please address it.
+                                            💀 seems like there is an issue with your email, please address it.
                                         </FormFeedbackStyle>
                                     </FormFeedback>
                                 </FormGroup>

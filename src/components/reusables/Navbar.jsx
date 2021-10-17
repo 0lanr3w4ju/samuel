@@ -1,16 +1,23 @@
-// core imports
-// import React, { useState } from 'react';
-
 // styling imports
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-import { TaglineStyle, NavLinkStyle } from '../reusables-css/Navbar';
-import '../reusables-css/Navbar.css'
+import { Navbar, NavbarBrand } from 'reactstrap';
+import { TaglineStyle, NavOptions, NavOption } from '../reusables-css/Navbar';
+import '../reusables-css/Navbar.css';
 
-const Navigationbar = () => {
+import ContactMeForm from '../reusables/ContactMeForm';
+import AboutMeCard from '../reusables/AboutMeCard';
 
-    // const [collapsed, setCollapsed] = useState(true);
+const Navigationbar = ({ setSelectedNavOption }) => {
 
-    // const toggleNavbar = () => setCollapsed(!collapsed);
+    const clickOption = (e) => {    
+
+        if (e.target.name === 'navbarButton1') {
+            setSelectedNavOption(<AboutMeCard />);
+        }
+
+        if (e.target.name === 'navbarButton2') {
+            setSelectedNavOption(<ContactMeForm />);
+        }
+    }
 
     return (
         <div>
@@ -18,33 +25,21 @@ const Navigationbar = () => {
                 fixed="top"
                 className="navbarStyle"
             >
-                <NavbarBrand href="https://0lanr3w4ju.github.io/samuel/" className="mr-auto">
+                <NavbarBrand href="https://0lanr3w4ju.github.io/samuel/" >
                     <TaglineStyle>
                         [0lanr3w4ju]: Lag05 based Fullstack Developer<span> = Ethical Hacker</span>
                     </TaglineStyle>
                 </NavbarBrand>
 
-                {/* <NavbarToggler onClick={toggleNavbar} className="mr-2 navbarTogglerStyle" /> */}
+                <NavOptions>
+                    <NavOption name="navbarButton1" type="button" onClick={clickOption}>
+                        About me
+                    </NavOption>
 
-                {/* <Collapse isOpen={!collapsed} navbar>
-                    <Nav navbar>
-                        <NavItem>
-                            <NavLink href="http://localhost:3000">
-                                <NavLinkStyle>
-                                    Github
-                                </NavLinkStyle>
-                            </NavLink>
-                        </NavItem>
-
-                        <NavItem>
-                            <NavLink href="http://localhost:3000">
-                                <NavLinkStyle>
-                                    Dribble
-                                </NavLinkStyle>
-                            </NavLink>
-                        </NavItem>
-                    </Nav>
-                </Collapse> */}
+                    <NavOption name="navbarButton2" type="button" onClick={clickOption}>
+                        Contact me
+                    </NavOption>
+                </NavOptions>
             </Navbar>
         </div>
     )

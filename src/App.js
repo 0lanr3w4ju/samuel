@@ -13,6 +13,10 @@ const App = () => {
         <Route path="/">
           <Mainpage />
         </Route>
+
+        <Route path="/">
+          <Mainpage />
+        </Route>
       </Switch>
     </Router>
   );

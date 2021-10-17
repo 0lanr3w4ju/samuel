@@ -1,15 +1,28 @@
+import React, { useState } from 'react';
+
+// style import
 import { MainpageStyle } from '../pages-css/Mainpage';
-import ContactMeForm from '../reusables/ContactMeForm';
+
+// component import
 import Navigationbar from '../reusables/Navbar';
-import AboutMeCard from '../reusables/AboutMeCard';
+
+// animation import
+// import ReactCSSTransitionGroup from 'react-transition-group';
 
 const Mainpage = () => {
 
+    const [selectedNavOption, setSelectedNavOption] = useState('');
+    
+    const DynamicSect = () => {
+        return (
+                selectedNavOption
+        );
+    }
+
     return (
         <MainpageStyle>
-            <Navigationbar />
-            <AboutMeCard />
-            {/* <ContactMeForm /> */}
+            <Navigationbar setSelectedNavOption={setSelectedNavOption} />
+            <DynamicSect />
         </MainpageStyle>
     )
 }
