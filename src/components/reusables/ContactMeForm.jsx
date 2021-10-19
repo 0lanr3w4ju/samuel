@@ -7,7 +7,7 @@ import { FormStyle, InnerFormStyle, ButtonStyle, FormFeedbackStyle } from '../re
 // http requests
 import axios from "axios";
 
-
+// contact me form object
 const ContactMeForm = () => {
 
     const clientCredential = {
@@ -120,7 +120,7 @@ const ContactMeForm = () => {
                     
                     </InnerFormStyle>
                 </Form>
-            </FormStyle>
+        </FormStyle>
     )
 }
 

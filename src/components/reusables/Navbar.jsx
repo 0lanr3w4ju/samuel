@@ -27,7 +27,7 @@ const Navigationbar = ({ setSelectedNavOption }) => {
             >
                 <NavbarBrand href="https://0lanr3w4ju.github.io/samuel/" >
                     <TaglineStyle>
-                        [0lanr3w4ju]: Lag05 based Fullstack Developer<span> = Ethical Hacker</span>
+                        [0lanr3w4ju]: Lag05 based Software Engineer<span> = Ethical Hacker</span>
                     </TaglineStyle>
                 </NavbarBrand>
 
