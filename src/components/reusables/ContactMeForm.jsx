@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // styling imports
 import { Row, Col, Form, FormGroup, Input, FormFeedback } from 'reactstrap';
-import { FormStyle, InnerFormStyle, ButtonStyle, FormFeedbackStyle } from '../reusables-css/ContactMeForm';
+import { FormStyle, InnerFormStyle, ButtonStyle, FormFeedbackStyle, FormInputStyle } from '../reusables-css/ContactMeForm';
 
 // http requests
 import axios from "axios";
@@ -62,45 +62,48 @@ const ContactMeForm = () => {
                 <Form onSubmit={onSubmit}>
                     <InnerFormStyle>
                         <FormGroup>
-                            <Input
-                                type="textarea"
-                                name="comment"
-                                placeholder="Hi, what will you like me to do for you? 😇"
-                                onChange={onInputChange}
-                                style={{
-                                    height: 300,
-                                    fontFamily: 'Noto Sans Mono, monospace'
-                                }}
-                                value={credential.comment}
-                            />
+                            <FormInputStyle>
+                                <Input
+                                    type="textarea"
+                                    name="comment"
+                                    placeholder="Hi, what will you like me to do for you? 😇"
+                                    onChange={onInputChange}
+                                    style={{
+                                        height: 300,
+                                    }}
+                                    value={credential.comment}
+                                />
+                            </FormInputStyle>
                         </FormGroup>
 
                         <Row form>
                             <Col md={6}>
                                 <FormGroup>
-                                    <Input
-                                        type="fullname"
-                                        name="fullname"
-                                        placeholder="please enter your fullname"
-                                        onChange={onInputChange}
-                                        value={credential.fullname}
-                                        style={{ fontFamily: 'Noto Sans Mono, monospace' }}
-                                    />
+                                    <FormInputStyle>
+                                        <Input
+                                                type="fullname"
+                                                name="fullname"
+                                                placeholder="please enter your fullname"
+                                                onChange={onInputChange}
+                                                value={credential.fullname}
+                                            />
+                                    </FormInputStyle>
                                 </FormGroup>
                             </Col>
 
                             <Col md={6}>
-                                <FormGroup>
+                            <FormGroup>
+                                <FormInputStyle>
                                     <Input
-                                        type="email"
-                                        name="email"
-                                        placeholder="please enter your email"
-                                        onChange={onInputChange}
-                                        valid={emailState === 'has-success'}
-                                        invalid={emailState === 'has-danger'}
-                                        value={credential.email}
-                                        style={{ fontFamily: 'Noto Sans Mono, monospace' }}
-                                    />
+                                            type="email"
+                                            name="email"
+                                            placeholder="please enter your email"
+                                            onChange={onInputChange}
+                                            valid={emailState === 'has-success'}
+                                            invalid={emailState === 'has-danger'}
+                                            value={credential.email}
+                                        />
+                                </FormInputStyle>
                                 
                                     <FormFeedback>
                                         <FormFeedbackStyle>

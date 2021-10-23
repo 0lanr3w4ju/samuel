@@ -1,7 +1,7 @@
 // styling imports
 import { Navbar, NavbarBrand } from 'reactstrap';
 import { TaglineStyle, NavOptions, NavOption } from '../reusables-css/Navbar';
-import '../reusables-css/Navbar.css';
+import '../reusables-css/Gen.css';
 
 import ContactMeForm from '../reusables/ContactMeForm';
 import AboutMeCard from '../reusables/AboutMeCard';

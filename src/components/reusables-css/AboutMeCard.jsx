@@ -11,6 +11,12 @@ export const BaseCard = styled.div`
     display: flex;
     z-index: 0;
     border-radius: 0.9em;
+
+    @media (max-width: 425px) {
+        margin-top: 15px;
+        width: 304px;
+        height: 465px;
+    }
 `;
 
 export const ProfilePic = styled.img`
@@ -22,6 +28,10 @@ export const ProfilePic = styled.img`
     margin-left: 80px;
     filter: grayscale(90%) brightness(150%);
     box-shadow: 0 12px 41px black;
+
+    @media (max-width: 425px) {
+        display: none;
+    }
 `;
 
 export const AboutMe = styled.div`
@@ -32,6 +42,13 @@ export const AboutMe = styled.div`
     margin-top: 80px;
     margin-left: 80px;
     align-items: left;
+
+    @media (max-width: 425px) {
+        width: 100%;
+        padding: 25px;
+        margin-left: 0px;
+        margin-top: 0px;   
+    }
 `;
 
 export const HeaderText = styled.h1`
@@ -48,6 +65,13 @@ export const HeaderText = styled.h1`
         color: bisque;
         filter: opacity(81%);
     }
+
+    @media (max-width: 425px) {
+        font-size: 16px;
+        span {
+            font-size: 17px;
+        }
+    }
 `;
 
 export const Text = styled.p`
@@ -55,6 +79,10 @@ export const Text = styled.p`
   color: powderblue;
   font-family: 'Noto Sans Mono, monospace';
   filter: opacity(81%);
+
+  @media (max-width: 425px) {
+      font-size: 15px;
+  }
 `;
 
 export const SocialIcons = styled.div`
@@ -65,5 +93,15 @@ export const SocialIcons = styled.div`
     a {
         color: bisque;
         filter: opacity(81%);
+    }
+
+    @media (max-width: 425px) {
+        margin-left: 83px;
+        span {
+            padding-right: 11px;
+        }
+        a {
+            font-size: 14px;
+        }
     }
 `;

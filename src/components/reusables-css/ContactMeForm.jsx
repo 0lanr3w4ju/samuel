@@ -10,11 +10,12 @@ export const FormStyle = styled.div`
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
-
     background-color: rgba(255, 255, 255, 0.1);
 
     @media (max-width: 425px) {
-        width: auto;
+        width: 304px;
+        padding: 2px;
+        margin-top: 15px;
     }
 `;
 
@@ -45,4 +46,12 @@ export const ButtonStyle = styled.button`
 
 export const FormFeedbackStyle = styled.p`
     color: white;
+`;
+
+export const FormInputStyle = styled.div`
+    fontFamily: 'Noto Sans Mono, monospace',
+
+    @media (max-width: 425px) {
+        font-size: 13px;
+    }
 `;

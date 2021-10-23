@@ -16,11 +16,17 @@ export const TaglineStyle = styled.div`
 
     @media (max-width: 425px) {
         font-size: 13px;
+        margin-left: 3px;
     }
 `;
 
 export const NavOptions = styled.div`
-
+    @media (max-width: 425px) {
+            font-size: 12px;
+            margin-left: 54px;
+            height: 50px;
+        }
+    }
 `;
 
 export const NavOption = styled.button`
@@ -40,5 +46,8 @@ export const NavOption = styled.button`
         color: bisque;
         text-shadow: 0 0 1px rgb(255 255 255 / 40%);
         box-shadow: 0 0 0px 1px rgb(255 255 255 / 50%), 2px 2px 6px rgb(49 188 184 / 40%), -2px -2px 6px rgb(251 131 250 / 40%);
+        }
+        @media (max-width: 425px) {
+            height: 32px;
         }
 `;

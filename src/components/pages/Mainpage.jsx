@@ -6,9 +6,11 @@ import styled from "@emotion/styled";
 
 // custom component import
 import Navigationbar from '../reusables/Navbar';
+import Footer from '../reusables/Footer';
 
 // animation import
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import { FooterText } from '../reusables-css/Footer';
 
 const Mainpage = () => {
 
@@ -22,6 +24,10 @@ const Mainpage = () => {
     const DynamicSectStyle = styled.div`
 
         height: 100%;
+
+        @media (max-width: 425px) {
+            height: 97%;
+        }
 
         &.${transitionName}-appear {
             opacity: 0.01;
@@ -48,6 +54,7 @@ const Mainpage = () => {
         &.${transitionName}-leave-active {
             opacity: 0;
             transition: opacity ${enterAndLeaveTimeout}ms;
+        
     }`;
     
     const DynamicSect = () => {
@@ -56,10 +63,6 @@ const Mainpage = () => {
                 transitionName={transitionName}
                 transitionAppear={true}
                 transitionAppearTimeout={appearDuration}
-                // transitionEnter={true}
-                // transitionEnterTimeout={enterAndLeaveTimeout}
-                // transitionLeave={true}
-                // transitionLeaveTimeout={enterAndLeaveTimeout}
             >
                 <DynamicSectStyle>
                     {selectedNavOption}
@@ -72,6 +75,7 @@ const Mainpage = () => {
         <MainpageStyle>
             <Navigationbar setSelectedNavOption={setSelectedNavOption} />
             <DynamicSect />
+            <Footer />
         </MainpageStyle>
     )
 }
